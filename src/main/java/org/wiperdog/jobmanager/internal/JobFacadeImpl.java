@@ -533,7 +533,7 @@ public class JobFacadeImpl implements JobFacade {
 							)
 					.withDescription(crondef)
 					.build();
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			logger.info("failed to create cron trigger, bad format:" + name + ", " + crondef, e);
 			throw new JobManagerException("failed to create cron trigger, bad format:" + name + ", " + crondef, e);
 		}
